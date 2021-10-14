@@ -16,5 +16,6 @@ namespace Week4.Library.Core.Interfaces
         Book GetById(int id);
         bool AddPrestito(Prestito newPrestito);
         void EditPrestito(Prestito prestito);
+        List<Prestito> FetchPrestiti();
     }
 }

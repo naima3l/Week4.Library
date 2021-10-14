@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week4.Library.EF", "Week4.L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week4.Library.LibraryAPI", "Week4.Library.AppClient\Week4.Library.LibraryAPI.csproj", "{83F7AB26-4A35-4FCE-82AA-48A09C2B3B1C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week4.Library.ClientAPI", "Week4.Library.ClientAPI\Week4.Library.ClientAPI.csproj", "{4FDA0508-6912-4D3B-AA4D-B6B1B55556D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{83F7AB26-4A35-4FCE-82AA-48A09C2B3B1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83F7AB26-4A35-4FCE-82AA-48A09C2B3B1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83F7AB26-4A35-4FCE-82AA-48A09C2B3B1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FDA0508-6912-4D3B-AA4D-B6B1B55556D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FDA0508-6912-4D3B-AA4D-B6B1B55556D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FDA0508-6912-4D3B-AA4D-B6B1B55556D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FDA0508-6912-4D3B-AA4D-B6B1B55556D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

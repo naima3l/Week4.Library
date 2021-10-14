@@ -93,5 +93,10 @@ namespace Week4.Library.Core.BusinessLayer
 
             prestitoRepo.Update(prestito);
         }
+
+        public List<Prestito> FetchPrestiti()
+        {
+            return prestitoRepo.Fetch();
+        }
     }
 }

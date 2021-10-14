@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Week4.Library.Core;
 using Week4.Library.Core.Interfaces;
@@ -58,7 +59,14 @@ namespace Week4.Library.EF.Repositories
 
         public List<Prestito> Fetch()
         {
-            throw new NotImplementedException();
+            try
+            {
+                return ctx.Prestiti.ToList();
+            }
+            catch (Exception)
+            {
+                return new List<Prestito>();
+            }
         }
 
         public Prestito GetById(int id)

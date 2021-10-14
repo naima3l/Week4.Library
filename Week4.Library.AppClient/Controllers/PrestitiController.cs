@@ -20,6 +20,14 @@ namespace Week4.Library.LibraryAPI.Controllers
             this.bl = mainBL;
         }
 
+        [HttpGet]
+        public IActionResult Get()
+        {
+            var prestiti = bl.FetchPrestiti();
+
+            return Ok(prestiti);
+        }
+
         [HttpPost]
         public IActionResult CreatePrestito([FromBody] Prestito newPrestito)
         {
