@@ -17,7 +17,16 @@ namespace Week4.Library.EF.Repositories
         }
         public bool Add(Prestito item)
         {
-            throw new NotImplementedException();
+            try
+            {
+                ctx.Prestiti.Add(item);
+                ctx.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
 
         public bool Add(Book book, string utente, DateTime date)
@@ -59,7 +68,16 @@ namespace Week4.Library.EF.Repositories
 
         public bool Update(Prestito item)
         {
-            throw new NotImplementedException();
+            try
+            {
+                ctx.Prestiti.Update(item);
+                ctx.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         public bool Update(Book book, string utente, DateTime dataReso)

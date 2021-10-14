@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Week4.Library.Core.Models;
 
 namespace Week4.Library.Core.Interfaces
 {
@@ -13,5 +14,7 @@ namespace Week4.Library.Core.Interfaces
         bool PrestitoLibro(Book book,string utente,DateTime date);
         bool ResoLibro(Book book, string utente, DateTime dataReso);
         Book GetById(int id);
+        bool AddPrestito(Prestito newPrestito);
+        void EditPrestito(Prestito prestito);
     }
 }

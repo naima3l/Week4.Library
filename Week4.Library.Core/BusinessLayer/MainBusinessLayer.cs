@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Week4.Library.Core.Interfaces;
+using Week4.Library.Core.Models;
 
 namespace Week4.Library.Core.BusinessLayer
 {
@@ -10,9 +11,10 @@ namespace Week4.Library.Core.BusinessLayer
         private readonly IBookRepository bookRepo;
         private readonly IPrestitoRepository prestitoRepo;
 
-        public MainBusinessLayer(IBookRepository bookRepository)
+        public MainBusinessLayer(IBookRepository bookRepository, IPrestitoRepository prestitoRepository)
         {
             this.bookRepo = bookRepository;
+            this.prestitoRepo = prestitoRepository;
         }
 
         public bool AddBook(Book newBook)
@@ -42,7 +44,10 @@ namespace Week4.Library.Core.BusinessLayer
 
         public Book GetById(int id)
         {
-            throw new NotImplementedException();
+            if (id <= 0)
+                return null;
+
+            return bookRepo.GetById(id);
         }
 
         public bool EditBook(Book editedBook)
@@ -73,5 +78,20 @@ namespace Week4.Library.Core.BusinessLayer
             return prestitoRepo.Update(book,utente, dataReso);
         }
 
+        public bool AddPrestito(Prestito newPrestito)
+        {
+            if (newPrestito == null)
+                return false;
+
+            return prestitoRepo.Add(newPrestito);
+        }
+
+        public void EditPrestito(Prestito prestito)
+        {
+            if (prestito == null)
+                return;
+
+            prestitoRepo.Update(prestito);
+        }
     }
 }
